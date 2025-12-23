@@ -1,0 +1,81 @@
+/* =========================
+   CONTACT FORM SECTION
+   ========================= */
+.contact-form-section {
+  background: #f2f2f2;
+  /* Light gray background */
+  padding: 120px 20px;
+  /* Top/bottom padding and side padding */
+}
+
+/* Wrapper to center form */
+.contact-form-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  /* Stack inputs vertically */
+  gap: 30px;
+  /* Space between inputs and textarea */
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  /* Full width */
+  padding: 5%;
+  /* Inner padding */
+  font-size: 13px;
+  border: 1px solid #ddd;
+  background: #aaaeb34e;
+  /* Semi-transparent gray */
+  outline: none;
+  font-family: inherit;
+}
+
+/* Textarea height */
+.contact-form textarea {
+  min-height: 70px;
+}
+
+/* Two-column layout for desktop */
+.form-row {
+  display: flex;
+  gap: 30px;
+  /* Space between columns */
+}
+
+/* Submit button */
+.contact-form button {
+  margin: 10px auto 0;
+  /* Center horizontally with margin */
+  padding: 7px 60px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  color: #525151;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+  /* Smooth hover transition */
+}
+
+.contact-form button:hover {
+  background: #3a3838;
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE STYLING
+   ========================= */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    /* Stack inputs vertically on tablets */
+  }
+}

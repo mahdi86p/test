@@ -1,0 +1,102 @@
+/* =========================
+   SERVICES SECTION
+   ========================= */
+
+/* Base padding and background */
+.services {
+  padding: 80px 20px;
+  background: #f1f3f5;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.title-line {
+  width: 80px;
+  border: none;
+  border-top: 2px solid #333;
+  margin: 15px auto 25px;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* ===== SERVICES Flex ===== */
+.services-grid {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+/* ===== SERVICE CARD ===== */
+.service-card {
+  background: #fff;
+  padding: 40px 25px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ===== HOVER EFFECT ===== */
+/* (Optional: Add shadow or scale effect if desired) */
+
+/* =========================
+   SERVICES RESPONSIVE
+   ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .services-grid {
+    justify-content: center;
+    /* Center cards */
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 45%;
+    /* Two cards per row */
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .service-card {
+    width: 90%;
+    /* Full width on mobile */
+    margin-bottom: 15px;
+  }
+}

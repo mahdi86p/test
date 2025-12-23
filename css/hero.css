@@ -1,0 +1,210 @@
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+  height: 100vh;
+  /* Full viewport height */
+  background: url("../image/sampleBg.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay (optional, can add dark layer if needed) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero-content {
+  position: relative;
+  color: #ffffff;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero button */
+.hero-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+   ========================= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+.about {
+  padding: 80px 20px;
+}
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex: 1 1;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-content h2 span {
+  display: block;
+  font-size: 18px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   SKILLS
+   ========================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+
+.skill {
+  flex: 0 0 calc(50% - 15px);
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #000;
+}
+
+/* =========================
+   ABOUT IMAGE
+   ========================= */
+.about-image img {
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   RESPONSIVE HERO & ABOUT
+   ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    padding: 120px 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    padding: 100px 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* Stack about section vertically */
+  .about-wrapper {
+    flex: 1;
+    gap: 30px;
+  }
+
+  .skill {
+    flex: 1 1 100%;
+    /* Single column skills on mobile */
+  }
+}

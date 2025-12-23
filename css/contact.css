@@ -1,0 +1,90 @@
+/* =========================
+   CONTACT AREA
+   ========================= */
+.contact-info {
+  padding: 100px 20px;
+  /* Top/bottom and side padding */
+  background: #fff;
+  text-align: center;
+}
+
+/* =========================
+   SECTION TITLE
+   ========================= */
+.contact-info .section-title h2 {
+  font-size: 36px;
+  /* Large heading */
+  margin-bottom: 15px;
+}
+
+.contact-info .section-title p {
+  max-width: 600px;
+  /* Limit paragraph width */
+  margin: 0 auto 70px;
+  /* Center paragraph and add bottom spacing */
+  color: #777;
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTACT GRID
+   ========================= */
+.contact-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  /* Space between boxes */
+}
+
+/* =========================
+   CONTACT BOX
+   ========================= */
+.contact-box {
+  padding: 40px 25px;
+  border: 0px solid #eee;
+  transition: 0.3s;
+  /* Smooth hover effect */
+}
+
+.contact-box:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* Slight shadow on hover */
+}
+
+/* =========================
+   ICON
+   ========================= */
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  /* Center icon with bottom margin */
+  background: #403d3d;
+  color: #fff;
+  border-radius: 50%;
+  /* Circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.contact-icon img {
+  width: 70%;
+  height: 70%;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+.contact-box h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}

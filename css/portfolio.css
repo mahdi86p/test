@@ -1,0 +1,120 @@
+/* =========================
+   PORTFOLIO SECTION
+   ========================= */
+
+/* Base padding */
+.portfolio-section {
+    padding: 80px 0;
+}
+
+/* Section header */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.portfolio-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Hide radio buttons used for filtering */
+.portfolio-section input[type="radio"] {
+    display: none;
+}
+
+/* Filter buttons */
+.portfolio-filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-filters label {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Highlight active filter */
+#all:checked~.portfolio-filters label[for="all"],
+#web:checked~.portfolio-filters label[for="web"],
+#dev:checked~.portfolio-filters label[for="dev"],
+#marketing:checked~.portfolio-filters label[for="marketing"] {
+    background: #222;
+    color: #fff;
+}
+
+/* Portfolio grid */
+.portfolio-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+/* Portfolio items */
+.portfolio-item {
+    flex: 1 1 250px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.08);
+    /* Zoom effect on hover */
+}
+
+/* Filtering logic: hide items that do not match selected filter */
+#web:checked~.portfolio-grid .portfolio-item:not(.web),
+#dev:checked~.portfolio-grid .portfolio-item:not(.dev),
+#marketing:checked~.portfolio-grid .portfolio-item:not(.marketing) {
+    display: none;
+}
+
+/* =========================
+   PORTFOLIO RESPONSIVE
+   ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        gap: 20px;
+    }
+
+    .portfolio-item {
+        width: 45%;
+        /* Two items per row */
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .portfolio-item {
+        width: 90%;
+        /* Full width on mobile */
+        margin-bottom: 15px;
+    }
+
+    .portfolio-filters {
+        flex-wrap: wrap;
+        /* Stack filters on small screens */
+        justify-content: center;
+        gap: 10px;
+    }
+}

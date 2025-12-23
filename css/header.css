@@ -1,0 +1,226 @@
+/* =========================
+   RESET
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY PADDING (to avoid content hidden behind fixed header)
+   ========================= */
+body {
+  padding-top: 90px;
+  /* Approximate header height; adjust between 80-100px if needed */
+}
+
+/* =========================
+   HEADER / NAVBAR
+   ========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(33, 32, 32, 0.914);
+  /* Semi-transparent dark background */
+  backdrop-filter: blur(12px);
+  /* Glass blur effect */
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari support */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 15px 0;
+}
+
+/* Header when scrolled */
+.site-header.scrolled {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  direction: rtl;
+  /* Right-to-left layout */
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.logo {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+.nav-bar {
+  display: flex;
+  position: relative;
+}
+
+/* Hide the checkbox for hamburger */
+.nav-bar input[type="checkbox"] {
+  display: none;
+}
+
+/* Hamburger icon (mobile) */
+.nav-bar label {
+  display: none;
+  /* Hidden on desktop */
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+/* Navigation list */
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-list li a:hover {
+  opacity: 0.8;
+  color: #7b5cff;
+}
+
+.nav-list li a.active {
+  color: #7b5cff;
+}
+
+.nav-list li a.active::after,
+.nav-list li a.active::before {
+  width: 15px;
+}
+
+.nav-list li a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #7b5cff;
+  transition: all 0.3s ease;
+  right: 0;
+}
+
+.nav-list li a::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 0;
+  height: 2px;
+  background: #7b5cff;
+  transition: all 0.3s ease;
+  left: 0;
+}
+
+.nav-list li a:hover::after {
+  width: 15px;
+  right: 0;
+}
+
+.nav-list li a:hover::before {
+  width: 15px;
+  left: 0;
+}
+
+
+/* =========================
+   RESPONSIVE HEADER / NAVBAR (FLEX ONLY)
+   ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .site-header .container {
+    flex-direction: column;
+    /* Stack logo and nav vertically */
+    align-items: center;
+  }
+
+  .nav-bar {
+    margin-top: 15px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    /* Vertical menu */
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile: Hamburger menu */
+@media (max-width: 576px) {
+  .nav-bar label {
+    display: block;
+    /* Show hamburger */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000000;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show menu when checkbox is checked */
+  .nav-bar input[type="checkbox"]:checked~.nav-list {
+    max-height: 500px;
+    /* Enough height to display all links */
+  }
+
+  .nav-list a {
+    padding: 12px 15px;
+    text-align: right;
+    /* RTL friendly */
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
