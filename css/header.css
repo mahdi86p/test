@@ -113,11 +113,11 @@ body {
 /* Hover effect */
 .nav-list li a:hover {
   opacity: 0.8;
-  color: #7b5cff;
+  color: #ffffff;
 }
 
 .nav-list li a.active {
-  color: #7b5cff;
+  color: #ffffff;
 }
 
 .nav-list li a.active::after,
@@ -131,7 +131,7 @@ body {
   bottom: -8px;
   width: 0;
   height: 2px;
-  background: #7b5cff;
+  background: #ffffff;
   transition: all 0.3s ease;
   right: 0;
 }
@@ -142,7 +142,7 @@ body {
   top: -8px;
   width: 0;
   height: 2px;
-  background: #7b5cff;
+  background: #ffffff;
   transition: all 0.3s ease;
   left: 0;
 }
