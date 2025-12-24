@@ -52,6 +52,8 @@ menuToggle.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 992) {
-    navList.style.display == "flex";
+    // navList.style.display = "flex";
+    navList[0].style.display = "flex";
+    console.log(navList[0].style.display);
   }
 });
