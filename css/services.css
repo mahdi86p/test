@@ -38,6 +38,8 @@
 /* ===== SERVICES Flex ===== */
 .services-grid {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 1200px;
   margin: auto;
   gap: 30px;
@@ -50,6 +52,7 @@
   text-align: center;
   border: 1px solid #eee;
   transition: 0.3s ease;
+  width: 290px;
 }
 
 .service-card img {
@@ -76,6 +79,7 @@
 /* =========================
    SERVICES RESPONSIVE
    ========================= */
+
 
 /* Tablet */
 @media (max-width: 992px) {

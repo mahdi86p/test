@@ -1,9 +1,12 @@
 // ================= Back To Top =================
 const btn = document.getElementById("backToTop");
+const menuToggle = document.getElementById("toggle");
 
 // ================= Scroll Spy =================
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-list li a");
+
+const navList = document.querySelectorAll(".nav-list");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset;
@@ -39,4 +42,16 @@ btn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
+});
+
+menuToggle.addEventListener("click", () => {
+  navList[0].style.display == "flex"
+    ? (navList[0].style.display = "none")
+    : (navList[0].style.display = "flex");
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 992) {
+    navList.style.display == "flex";
+  }
 });

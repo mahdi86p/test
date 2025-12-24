@@ -15,6 +15,15 @@ body {
   /* Approximate header height; adjust between 80-100px if needed */
 }
 
+@media (min-width: 993px) {
+  .nav-list {
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    flex-direction: row !important;
+  }
+}
+
 /* =========================
    HEADER / NAVBAR
    ========================= */
@@ -157,6 +166,12 @@ body {
   left: 0;
 }
 
+@media (min-width: 992px) {
+  .nav-list {
+    display: flex;
+
+  }
+}
 
 /* =========================
    RESPONSIVE HEADER / NAVBAR (FLEX ONLY)
@@ -172,15 +187,27 @@ body {
 
   .nav-bar {
     margin-top: 15px;
+    display: block;
   }
 
   .nav-list {
+    display: flex;
     flex-direction: column;
     /* Vertical menu */
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(33, 32, 32, 0.914);
+  }
+
+  .nav-list li {
+    padding: 10px 15px;
+  }
+
+  .nav-bar label {
+    display: block;
+    /* Show hamburger */
   }
 }
 
