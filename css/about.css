@@ -61,18 +61,8 @@ body {
 /* =========================
    SKILLS SECTION
    ========================= */
-.skills-1,
-.skills-2 {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-}
 
-.all-skills {
-  display: flex;
-  flex-direction: row;
-  gap: 20%;
-}
+
 
 .skill {
   margin-bottom: 25px;
@@ -114,34 +104,7 @@ body {
   border-radius: 8px;
 }
 
-/* =========================
-   BACK TO TOP BUTTON
-   ========================= */
-#backToTop {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
 
-#backToTop.show {
-  opacity: 0.8;
-  visibility: visible;
-}
-
-#backToTop:hover {
-  opacity: 1;
-}
 
 /* =========================
    RESPONSIVE STYLING

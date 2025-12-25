@@ -56,3 +56,20 @@ window.addEventListener("resize", () => {
     navList[0].style.display = "flex";
   }
 });
+
+// slider
+
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".hero-dot");
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const index = dot.getAttribute("data-slide");
+
+    slides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((d) => d.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dot.classList.add("active");
+  });
+});

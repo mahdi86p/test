@@ -3,15 +3,10 @@
    ========================= */
 .footer {
   background: #151515;
-  /* Dark background */
   color: #ccc;
-  /* Light gray text */
   text-align: center;
-  padding: 60px 20px 30px;
-  /* Top, sides, bottom padding */
-  font-family: Tahoma, sans-serif;
+  padding: 60px 20px;
 }
-
 /* Footer logo */
 .footer-logo {
   color: #fff;
@@ -25,16 +20,10 @@
    ========================= */
 .footer-info {
   display: flex;
-  /* Horizontal flex layout */
   justify-content: center;
-  /* Center items */
-  gap: 40px;
-  /* Space between info items */
+  gap: 30px;
   flex-wrap: wrap;
-  /* Wrap to next line if needed */
-  font-size: 14px;
 }
-
 .footer-info img {
   border-radius: 80px;
   /* Round icons */
@@ -70,13 +59,12 @@
 /* =========================
    SOCIAL ICONS
    ========================= */
+
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 20px;
 }
-
 .footer-social a {
   width: 36px;
   height: 36px;
@@ -85,11 +73,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
 }
+
 
 .footer-social a:hover {
   background: #fff;
@@ -146,3 +131,11 @@
     /* Smaller icons on mobile */
   }
 }
+
+
+
+
+
+
+
+
