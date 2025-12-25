@@ -1,14 +1,14 @@
 /* =========================
-   SERVICES SECTION
+   بخش خدمات
    ========================= */
 
-/* Base padding and background */
+/* پدینگ و بک گراند پایه */
 .services {
   padding: 80px 20px;
   background: #f1f3f5;
 }
 
-/* ===== SECTION TITLE ===== */
+/* ===== سرصفحه خدمات ===== */
 .section-title {
   text-align: center;
   margin-bottom: 60px;
@@ -35,7 +35,7 @@
   line-height: 1.6;
 }
 
-/* ===== SERVICES Flex ===== */
+/* ===== فلکس خدمات ===== */
 .services-grid {
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +45,7 @@
   gap: 30px;
 }
 
-/* ===== SERVICE CARD ===== */
+/* ===== استایل هر کارت خدمات ===== */
 .service-card {
   background: #fff;
   padding: 40px 25px;
@@ -55,52 +55,52 @@
   width: 290px;
 }
 
+/* ===== استایل عکس هر کارت خدمات ===== */
 .service-card img {
   width: 50px;
   height: 50px;
   margin-bottom: 15px;
 }
 
+/* =====  هر کارت خدمات h3 استایل ===== */
 .service-card h3 {
   font-size: 22px;
   margin-bottom: 12px;
   color: #333;
 }
 
+/* هر کارت خدمات p استایل */
 .service-card p {
   font-size: 15px;
   color: #777;
   line-height: 1.6;
 }
 
-/* ===== HOVER EFFECT ===== */
-/* (Optional: Add shadow or scale effect if desired) */
-
 /* =========================
-   SERVICES RESPONSIVE
+   خدمات ریسپانسیو
    ========================= */
 
 
-/* Tablet */
+/* تبلت */
 @media (max-width: 992px) {
   .services-grid {
     justify-content: center;
-    /* Center cards */
+    /* آوردن کارت به وسط */
     gap: 20px;
   }
 
   .service-card {
     width: 45%;
-    /* Two cards per row */
+    /* دو کارت در یک خط */
     text-align: center;
   }
 }
 
-/* Mobile */
+/* موبایل */
 @media (max-width: 576px) {
   .service-card {
+    /* عرض کامل برای موبایل */
     width: 90%;
-    /* Full width on mobile */
     margin-bottom: 15px;
   }
 }
