@@ -4,117 +4,137 @@
 
 /* Base padding */
 .portfolio-section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 /* Section header */
 .portfolio-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .portfolio-header h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .portfolio-header p {
-    color: #777;
-    font-size: 14px;
+  color: #777;
+  font-size: 14px;
 }
 
 /* Hide radio buttons used for filtering */
 .portfolio-section input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 /* Filter buttons */
 .portfolio-filters {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .portfolio-filters label {
-    display: inline-block;
-    padding: 8px 18px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /* Highlight active filter */
-#all:checked~.portfolio-filters label[for="all"],
-#web:checked~.portfolio-filters label[for="web"],
-#dev:checked~.portfolio-filters label[for="dev"],
-#marketing:checked~.portfolio-filters label[for="marketing"] {
-    background: #222;
-    color: #fff;
+#all:checked ~ .portfolio-filters label[for="all"],
+#web:checked ~ .portfolio-filters label[for="web"],
+#dev:checked ~ .portfolio-filters label[for="dev"],
+#marketing:checked ~ .portfolio-filters label[for="marketing"] {
+  background: #222;
+  color: #fff;
+}
+.portfolio {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  grid-auto-flow: dense; /* خیلی مهم */
+  gap: 25px;
 }
 
-/* Portfolio grid */
-.portfolio-grid {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    gap: 20px;
-}
 
-/* Portfolio items */
 .portfolio-item {
-    flex: 1 1 250px;
-    overflow: hidden;
-    transition: 0.4s;
+  overflow: hidden;
 }
+
+/* کوچک */
+.portfolio-item.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* بلند */
+.portfolio-item.tall {
+  grid-column: span 1;
+  grid-row: span 3;
+}
+
+/* عریض */
+.portfolio-item.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* بزرگ (مثل آیتم شاخص عکس) */
+.portfolio-item.big {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+
 
 .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.4s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.08);
-    /* Zoom effect on hover */
+  transform: scale(1.08);
 }
 
-/* Filtering logic: hide items that do not match selected filter */
-#web:checked~.portfolio-grid .portfolio-item:not(.web),
-#dev:checked~.portfolio-grid .portfolio-item:not(.dev),
-#marketing:checked~.portfolio-grid .portfolio-item:not(.marketing) {
-    display: none;
+
+
+#web:checked ~ .portfolio .portfolio-item:not(.web),
+#dev:checked ~ .portfolio .portfolio-item:not(.dev),
+#marketing:checked ~ .portfolio .portfolio-item:not(.marketing) {
+  display: none;
 }
+
 
 /* =========================
    PORTFOLIO RESPONSIVE
    ========================= */
-
-/* Tablet */
 @media (max-width: 992px) {
-    .portfolio-grid {
-        gap: 20px;
-    }
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .portfolio-item {
-        width: 45%;
-        /* Two items per row */
-    }
+  .portfolio-item.big,
+  .portfolio-item.wide {
+    grid-column: span 2;
+  }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
-    .portfolio-item {
-        width: 90%;
-        /* Full width on mobile */
-        margin-bottom: 15px;
-    }
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
 
-    .portfolio-filters {
-        flex-wrap: wrap;
-        /* Stack filters on small screens */
-        justify-content: center;
-        gap: 10px;
-    }
+  .portfolio-item {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
 }
