@@ -1,81 +1,124 @@
 /* =========================
-   CONTACT FORM SECTION
+   بخش فرم تماس
    ========================= */
+
+/* بخش کلی فرم تماس */
 .contact-form-section {
   background: #f2f2f2;
-  /* Light gray background */
+  /* پس‌زمینه خاکستری روشن برای جدا شدن از سایر بخش‌ها */
   padding: 120px 20px;
-  /* Top/bottom padding and side padding */
-}
-
-/* Wrapper to center form */
-.contact-form-wrapper {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-/* Form layout */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  /* Stack inputs vertically */
-  gap: 30px;
-  /* Space between inputs and textarea */
-}
-
-/* Inputs and Textarea */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  /* Full width */
-  padding: 5%;
-  /* Inner padding */
-  font-size: 13px;
-  border: 1px solid #ddd;
-  background: #aaaeb34e;
-  /* Semi-transparent gray */
-  outline: none;
-  font-family: inherit;
-}
-
-/* Textarea height */
-.contact-form textarea {
-  min-height: 70px;
-}
-
-/* Two-column layout for desktop */
-.form-row {
-  display: flex;
-  gap: 30px;
-  /* Space between columns */
-}
-
-/* Submit button */
-.contact-form button {
-  margin: 10px auto 0;
-  /* Center horizontally with margin */
-  padding: 7px 60px;
-  font-size: 16px;
-  background-color: #f2f2f2;
-  color: #525151;
-  border: 1px solid black;
-  cursor: pointer;
-  transition: 0.3s;
-  /* Smooth hover transition */
-}
-
-.contact-form button:hover {
-  background: #3a3838;
-  color: white;
+  /* فاصله داخلی بالا و پایین زیاد و فاصله از کناره‌ها */
 }
 
 /* =========================
-   RESPONSIVE STYLING
+   کانتینر فرم
    ========================= */
+
+/* کانتینر برای وسط‌چین کردن فرم */
+.contact-form-wrapper {
+  max-width: 1000px;
+  /* محدود کردن عرض فرم */
+  margin: auto;
+  /* وسط‌چین افقی */
+  text-align: center;
+  /* وسط‌چین شدن متن‌ها */
+}
+
+/* =========================
+   ساختار فرم
+   ========================= */
+
+/* ساختار کلی فرم تماس */
+.contact-form {
+  display: flex;
+  /* استفاده از فلکس‌باکس */
+  flex-direction: column;
+  /* چیدمان عمودی فیلدها */
+  gap: 30px;
+  /* فاصله بین اینپوت‌ها و تکست‌اریا */
+}
+
+/* =========================
+   فیلدهای ورودی
+   ========================= */
+
+/* استایل مشترک اینپوت‌ها و تکست‌اریا */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  /* پر کردن کل عرض کانتینر */
+  padding: 5%;
+  /* فاصله داخلی مناسب */
+  font-size: 13px;
+  /* اندازه فونت متن */
+  border: 1px solid #ddd;
+  /* کادر نازک اطراف فیلد */
+  background: #aaaeb34e;
+  /* پس‌زمینه نیمه‌شفاف */
+  outline: none;
+  /* حذف خط فوکوس پیش‌فرض */
+  font-family: inherit;
+  /* استفاده از فونت والد */
+}
+
+/* تنظیم حداقل ارتفاع تکست‌اریا */
+.contact-form textarea {
+  min-height: 70px;
+  /* جلوگیری از خیلی کوچک شدن فیلد پیام */
+}
+
+/* =========================
+   ردیف دو ستونه
+   ========================= */
+
+/* ردیف شامل دو فیلد کنار هم در دسکتاپ */
+.form-row {
+  display: flex;
+  /* چیدمان افقی فیلدها */
+  gap: 30px;
+  /* فاصله بین دو ستون */
+}
+
+/* =========================
+   دکمه ارسال
+   ========================= */
+
+/* دکمه ارسال فرم */
+.contact-form button {
+  margin: 10px auto 0;
+  /* وسط‌چین افقی و فاصله از بالا */
+  padding: 7px 60px;
+  /* اندازه دکمه */
+  font-size: 16px;
+  /* اندازه فونت */
+  background-color: #f2f2f2;
+  /* رنگ پس‌زمینه اولیه */
+  color: #525151;
+  /* رنگ متن */
+  border: 1px solid black;
+  /* کادر دکمه */
+  cursor: pointer;
+  /* تغییر شکل نشانگر موس */
+  transition: 0.3s;
+  /* انیمیشن نرم هنگام هاور */
+}
+
+/* افکت هاور دکمه ارسال */
+.contact-form button:hover {
+  background: #3a3838;
+  /* تیره شدن پس‌زمینه */
+  color: white;
+  /* سفید شدن متن */
+}
+
+/* =========================
+   ریسپانسیو
+   ========================= */
+
+/* تنظیمات نمایش در تبلت و موبایل */
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
-    /* Stack inputs vertically on tablets */
+    /* قرارگیری فیلدها زیر هم در صفحه‌های کوچک */
   }
 }

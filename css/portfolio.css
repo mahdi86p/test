@@ -1,39 +1,38 @@
-/* =========================
-   PORTFOLIO SECTION
-   ========================= */
-
-/* Base padding */
+/* استایل کلی بخش پورتفولیو و فاصله بالا و پایین */
 .portfolio-section {
   padding: 80px 0;
 }
 
-/* Section header */
+/* کانتینر هدر بخش نمونه‌کار */
 .portfolio-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* عنوان اصلی پورتفولیو */
 .portfolio-header h2 {
   font-size: 36px;
   margin-bottom: 10px;
 }
 
+/* توضیح زیر عنوان پورتفولیو */
 .portfolio-header p {
   color: #777;
   font-size: 14px;
 }
 
-/* Hide radio buttons used for filtering */
+/* مخفی کردن دکمه‌های رادیویی مورد استفاده برای فیلتر کردن */
 .portfolio-section input[type="radio"] {
   display: none;
 }
 
-/* Filter buttons */
+/* کانتینر دکمه‌های فیلتر */
 .portfolio-filters {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* استایل هر دکمه فیلتر */
 .portfolio-filters label {
   display: inline-block;
   padding: 8px 18px;
@@ -43,7 +42,7 @@
   transition: 0.3s;
 }
 
-/* Highlight active filter */
+/* استایل دکمه فیلتر فعال (زمانی که رادیو چک شده) */
 #all:checked~.portfolio-filters label[for="all"],
 #web:checked~.portfolio-filters label[for="web"],
 #dev:checked~.portfolio-filters label[for="dev"],
@@ -52,6 +51,7 @@
   color: #fff;
 }
 
+/* گرید اصلی آیتم‌های پورتفولیو */
 .portfolio {
   width: 90%;
   max-width: 1200px;
@@ -61,6 +61,7 @@
   gap: 30px;
 }
 
+/* آیتم بزرگ (دو ستون و دو ردیف) */
 .big {
   display: grid;
   grid-row-start: 1;
@@ -69,6 +70,7 @@
   grid-column-end: 3;
 }
 
+/* آیتم بزرگ دوم با موقعیت متفاوت در گرید */
 .secondBig {
   display: grid;
   grid-row-start: 2;
@@ -77,10 +79,12 @@
   grid-column-end: 5;
 }
 
+/* تنظیمات کلی هر آیتم پورتفولیو */
 .portfolio-item {
   overflow: hidden;
 }
 
+/* تنظیمات تصویر داخل آیتم */
 .portfolio-item img {
   width: 100%;
   height: 100%;
@@ -88,33 +92,38 @@
   transition: 0.4s;
 }
 
+/* افکت زوم تصویر هنگام هاور */
 .portfolio-item:hover img {
   transform: scale(1.08);
 }
 
-
-
+/* مخفی کردن آیتم‌هایی که با فیلتر انتخاب‌شده هم‌خوانی ندارند */
 #web:checked~.portfolio .portfolio-item:not(.web),
 #dev:checked~.portfolio .portfolio-item:not(.dev),
 #marketing:checked~.portfolio .portfolio-item:not(.marketing) {
   display: none;
 }
 
-
 /* =========================
    PORTFOLIO RESPONSIVE
    ========================= */
+
+/* ریسپانسیو برای تبلت و صفحه‌های متوسط */
 @media (max-width: 992px) {
+
+  /* تغییر گرید به دو ستون */
   .portfolio {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* تنظیم ارتفاع آیتم‌های tall */
   .portfolio-item.tall {
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
+  /* تنظیم موقعیت آیتم big در حالت تبلت */
   .portfolio-item.big {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -122,6 +131,7 @@
     grid-row-end: 2;
   }
 
+  /* تنظیم موقعیت آیتم secondBig */
   .secondBig {
     display: grid;
     grid-column-start: 1;
@@ -129,11 +139,15 @@
   }
 }
 
+/* ریسپانسیو برای موبایل */
 @media (max-width: 576px) {
+
+  /* تبدیل گرید به تک‌ستونه */
   .portfolio {
     grid-template-columns: 1fr;
   }
 
+  /* حذف هرگونه span اضافی آیتم‌ها */
   .portfolio-item {
     grid-column: span 1 !important;
     grid-row: span 1 !important;

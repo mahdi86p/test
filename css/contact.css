@@ -1,91 +1,128 @@
 /* =========================
-   CONTACT AREA
+   بخش تماس
    ========================= */
+
+/* کانتینر اصلی اطلاعات تماس */
 .contact-info {
   padding: 100px 20px;
-  /* Top/bottom and side padding */
+  /* فاصله داخلی بالا و پایین زیاد + فاصله از کناره‌ها */
   background: #fff;
+  /* پس‌زمینه سفید برای خوانایی بهتر */
   text-align: center;
+  /* وسط‌چین کردن تمام متن‌ها */
 }
 
 /* =========================
-   SECTION TITLE
+   عنوان بخش
    ========================= */
+
+/* تیتر اصلی بخش تماس */
 .contact-info .section-title h2 {
   font-size: 36px;
-  /* Large heading */
+  /* اندازه بزرگ عنوان */
   margin-bottom: 15px;
+  /* فاصله از متن توضیحی */
 }
 
+/* متن توضیحی زیر عنوان */
 .contact-info .section-title p {
   max-width: 600px;
-  /* Limit paragraph width */
+  /* محدود کردن عرض متن برای زیبایی و خوانایی */
   margin: 0 auto 70px;
-  /* Center paragraph and add bottom spacing */
+  /* وسط‌چین کردن و ایجاد فاصله از باکس‌ها */
   color: #777;
+  /* رنگ ملایم متن */
   line-height: 1.7;
+  /* افزایش فاصله خطوط */
 }
 
 /* =========================
-   CONTACT GRID
+   گرید تماس
    ========================= */
+
+/* کانتینر باکس‌های تماس */
 .contact-grid {
   max-width: 1200px;
+  /* حداکثر عرض گرید */
   margin: auto;
+  /* وسط‌چین افقی */
   display: flex;
+  /* چیدمان فلکسی */
   gap: 30px;
-  /* Space between boxes */
+  /* فاصله بین باکس‌ها */
   justify-content: space-between;
+  /* پخش یکنواخت باکس‌ها */
 }
 
 /* =========================
-   CONTACT BOX
+   باکس تماس
    ========================= */
+
+/* هر باکس اطلاعات تماس */
 .contact-box {
   padding: 40px 25px;
+  /* فاصله داخلی مناسب برای محتوا */
   border: 0px solid #eee;
+  /* بدون کادر (رزرو شده برای توسعه) */
   transition: 0.3s;
-  /* Smooth hover effect */
+  /* انیمیشن نرم هنگام تغییر حالت */
 }
 
+/* افکت هاور روی باکس تماس */
 .contact-box:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  /* Slight shadow on hover */
+  /* ایجاد سایه ملایم برای تاکید */
 }
 
 /* =========================
-   ICON
+   آیکن
    ========================= */
+
+/* کانتینر آیکن اطلاعات تماس */
 .contact-icon {
   width: 70px;
   height: 70px;
   margin: 0 auto 25px;
-  /* Center icon with bottom margin */
+  /* وسط‌چین آیکن و فاصله از متن پایین */
   background: #403d3d;
+  /* رنگ پس‌زمینه آیکن */
   color: #fff;
+  /* رنگ آیکن */
   border-radius: 50%;
-  /* Circle */
+  /* دایره‌ای کردن آیکن */
   display: flex;
+  /* استفاده از فلکس برای مرکز کردن */
   align-items: center;
   justify-content: center;
   font-size: 26px;
+  /* اندازه آیکن */
 }
 
+/* تصویر داخل آیکن تماس */
 .contact-icon img {
   width: 70%;
   height: 70%;
+  /* تنظیم اندازه تصویر داخل دایره */
 }
 
 /* =========================
-   TEXT
+   متن‌ها
    ========================= */
+
+/* عنوان هر باکس تماس */
 .contact-box h4 {
   font-size: 18px;
+  /* اندازه مناسب برای تیتر */
   margin-bottom: 10px;
+  /* فاصله از متن توضیحی */
 }
 
+/* متن توضیحی هر باکس تماس */
 .contact-box p {
   font-size: 14px;
+  /* اندازه فونت متن */
   color: #777;
+  /* رنگ ملایم برای متن فرعی */
   line-height: 1.6;
+  /* فاصله خطوط برای خوانایی */
 }

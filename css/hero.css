@@ -1,18 +1,21 @@
 /* =========================
-   HERO SLIDER
+   Hero اسلایدر بخش 
    ========================= */
 
+/* کانتینر اصلی هیرو (تمام ارتفاع صفحه) */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-/* اسلایدر */
+/* کانتینر اسلایدر (تمام فضای هیرو) */
 .hero-slider {
   position: absolute;
   inset: 0;
 }
+
+/* هر اسلاید (پس‌زمینه تصویری) */
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -24,11 +27,16 @@
   will-change: opacity;
 }
 
+/* اسلاید فعال (قابل نمایش) */
 .hero-slide.active {
   opacity: 1;
 }
 
-/* کنترل‌های اسلایدر */
+/* =========================
+   کنترل بخش اسلایدر
+   ========================= */
+
+/* کانتینر کنترل‌های اسلایدر */
 .hero-controls {
   position: absolute;
   bottom: 35px;
@@ -39,7 +47,7 @@
   z-index: 3;
 }
 
-/* مستطیل‌ها */
+/* دات‌ها / مستطیل‌های کنترل اسلایدر */
 .hero-dot {
   width: 35px;
   height: 6px;
@@ -49,19 +57,21 @@
   background: transparent;
 }
 
-/* hover */
+/* افکت هاور روی دات‌ها */
 .hero-dot:hover {
   background: #fff;
 }
 
-/* فعال */
+/* دات فعال (اسلاید انتخاب‌شده) */
 .hero-dot.active {
   background: #fff;
 }
 
+/* =========================
+   HERO OVERLAY
+   ========================= */
 
-
-/* Overlay تیره */
+/* لایه تیره روی اسلایدر برای خوانایی متن */
 .hero::after {
   content: "";
   position: absolute;
@@ -70,7 +80,11 @@
   z-index: 1;
 }
 
-/* محتوای روی اسلایدر */
+/* =========================
+   HERO CONTENT
+   ========================= */
+
+/* محتوای متنی روی اسلایدر */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -86,19 +100,21 @@
   padding: 0 20px;
 }
 
+/* عنوان اصلی هیرو */
 .hero-content h2 {
   font-size: 52px;
   font-weight: 700;
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
 }
 
+/* متن توضیحی زیر عنوان */
 .hero-content p {
   font-size: 18px;
   margin-bottom: 25px;
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* دکمه */
+/* دکمه فراخوان  */
 .hero-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -108,14 +124,17 @@
   transition: 0.3s;
 }
 
+/* افکت هاور دکمه */
 .hero-btn:hover {
   background: #fff;
   color: #000;
 }
 
 /* =========================
-   BACK TO TOP BUTTON
+   برگشت به پایین
    ========================= */
+
+/* دکمه بازگشت به بالای صفحه */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -138,18 +157,22 @@
   transition: 0.3s;
 }
 
+/* حالت نمایش دکمه */
 #backToTop.show {
   opacity: 1;
   visibility: visible;
 }
 
 /* =========================
-   ABOUT SECTION
+   بخش درباره
    ========================= */
+
+/* بخش درباره من */
 .about {
   padding: 80px 20px;
 }
 
+/* کانتینر محتوای درباره من */
 .about-wrapper {
   max-width: 1200px;
   margin: auto;
@@ -159,11 +182,13 @@
   align-items: center;
 }
 
+/* عنوان بخش درباره من */
 .about-content h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
+/* زیرعنوان (مثلاً شغل یا توضیح کوتاه) */
 .about-content h2 span {
   display: block;
   font-size: 18px;
@@ -171,6 +196,7 @@
   margin-top: 5px;
 }
 
+/* متن توضیحی درباره من */
 .about-content p {
   color: #666;
   line-height: 1.7;
@@ -178,18 +204,22 @@
 }
 
 /* =========================
-   SKILLS
+   مهارت ها
    ========================= */
+
+/* کانتینر مهارت‌ها */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 30px;
 }
 
+/* هر مهارت */
 .skill {
   flex: 0 0 calc(50% - 15px);
 }
 
+/* عنوان مهارت و درصد */
 .skill-title {
   display: flex;
   justify-content: space-between;
@@ -197,6 +227,7 @@
   margin-bottom: 6px;
 }
 
+/* نوار زمینه مهارت */
 .skill-bar {
   background: #eee;
   height: 8px;
@@ -204,23 +235,27 @@
   overflow: hidden;
 }
 
+/* میزان پرشدگی مهارت */
 .skill-fill {
   height: 100%;
   background: #000;
 }
 
 /* =========================
-   ABOUT IMAGE
+   عکس درباره
    ========================= */
+
+/* تصویر بخش درباره من */
 .about-image img {
   width: 100%;
   display: block;
 }
 
 /* =========================
-   RESPONSIVE HERO
+   ریسپانسیو بخش Hero
    ========================= */
 
+/* تنظیمات ریسپانسیو برای تبلت */
 @media (max-width: 992px) {
   .hero-content h2 {
     font-size: 32px;
@@ -231,6 +266,7 @@
   }
 }
 
+/* تنظیمات ریسپانسیو برای موبایل */
 @media (max-width: 576px) {
   .hero-content h2 {
     font-size: 24px;
