@@ -1,242 +1,152 @@
-/* =========================
-   بخش بلاگ
-   ========================= */
-
-/* سکشن اصلی بلاگ */
+/* ========================= BLOG SECTION ========================= */
 .blog-section {
   padding: 200px 0;
-  /* فاصله داخلی زیاد از بالا و پایین */
+  /* Top and bottom padding */
   background: #f1f3f5;
-  /* پس‌زمینه خاکستری روشن */
 }
 
-/* =========================
-   کانتینر بلاگ
-   ========================= */
-
-/* نگهدارنده کارت‌ها و فلش‌ها */
+/* ========================= BLOG WRAPPER ========================= */
 .blog-wrapper {
   position: relative;
-  /* برای موقعیت‌دهی عناصر داخلی */
   display: flex;
-  /* استفاده از فلکس‌باکس */
   align-items: center;
-  /* وسط‌چین عمودی */
   justify-content: center;
-  /* وسط‌چین افقی */
 }
 
-/* =========================
-   کارت‌های بلاگ
-   ========================= */
-
-/* لیست کارت‌های بلاگ */
+/* ========================= BLOG CARDS ========================= */
 .blog-cards {
   display: flex;
-  /* چیدمان افقی کارت‌ها */
   gap: 30px;
-  /* فاصله بین کارت‌ها */
+  /* Space between cards */
 }
 
-/* کارت تکی بلاگ */
 .blog-card {
   width: 300px;
-  /* عرض ثابت کارت */
+  /* Card width */
   background: #fff;
-  /* پس‌زمینه سفید */
   border: 1px solid #eee;
-  /* حاشیه ظریف */
 }
 
-/* =========================
-   تصویر بلاگ
-   ========================= */
-
-/* تصویر داخل کارت بلاگ */
+/* Blog image */
 .blog-img img {
   width: 100%;
-  /* پر کردن عرض کارت */
   height: 200px;
-  /* ارتفاع ثابت تصویر */
   object-fit: cover;
-  /* حفظ نسبت تصویر و برش در صورت نیاز */
+  /* Maintain aspect ratio, crop if needed */
 }
 
-/* =========================
-   محتوای بلاگ
-   ========================= */
-
-/* بخش محتوای کارت بلاگ */
+/* Blog content */
 .blog-content {
   padding: 25px;
-  /* فاصله داخلی محتوا */
   text-align: left;
-  /* تراز متن به چپ در دسکتاپ */
 }
 
-/* اطلاعات متا بلاگ (تاریخ، نویسنده و ...) */
 .blog-meta {
   list-style: none;
-  /* حذف بولت لیست */
   padding: 0;
-  /* حذف فاصله داخلی */
   margin: 0 0 15px;
-  /* فاصله از پایین */
   display: flex;
-  /* نمایش آیتم‌ها کنار هم */
   gap: 10px;
-  /* فاصله بین آیتم‌ها */
   font-size: 12px;
-  /* اندازه فونت کوچک */
   color: #777;
-  /* رنگ خاکستری متن */
 }
 
-/* عنوان بلاگ */
 .blog-content h3 {
   font-size: 18px;
-  /* اندازه عنوان */
   margin-bottom: 10px;
-  /* فاصله از پایین */
   color: #333;
-  /* رنگ تیره متن */
 }
 
-/* متن توضیح بلاگ */
 .blog-content p {
   font-size: 14px;
-  /* اندازه متن */
   color: #666;
-  /* رنگ خاکستری */
   line-height: 1.6;
-  /* فاصله خطوط مناسب */
   margin-bottom: 20px;
-  /* فاصله از دکمه */
 }
 
-/* =========================
-   لینک ادامه مطلب
-   ========================= */
-
-/* دکمه یا لینک ادامه مطلب */
+/* Read more link */
 .read-more {
   display: inline-block;
-  /* نمایش به صورت بلاک خطی */
   padding: 6px 15px;
-  /* فاصله داخلی */
   border: 1px solid #333;
-  /* کادر دور لینک */
   font-size: 12px;
-  /* اندازه فونت */
   color: #333;
-  /* رنگ متن */
   text-decoration: none;
-  /* حذف خط زیر لینک */
   transition: 0.3s;
-  /* انیمیشن نرم */
 }
 
-/* افکت هاور لینک ادامه مطلب */
 .read-more:hover {
   background: #333;
-  /* تیره شدن پس‌زمینه */
   color: #fff;
-  /* سفید شدن متن */
 }
 
-/* =========================
-   فلش‌های ناوبری
-   ========================= */
-
-/* فلش‌های جابجایی بلاگ */
+/* ========================= ARROWS ========================= */
 .blog-arrow {
   width: 40px;
-  /* عرض فلش */
   height: 40px;
-  /* ارتفاع فلش */
   border: 1px solid #ccc;
-  /* کادر فلش */
   border-radius: 50%;
-  /* دایره‌ای شدن */
   text-align: center;
-  /* وسط‌چین افقی آیکن */
   line-height: 38px;
-  /* وسط‌چین عمودی آیکن */
   font-size: 22px;
-  /* اندازه آیکن */
   cursor: pointer;
-  /* تغییر شکل موس */
   color: #333;
-  /* رنگ آیکن */
   margin: 0 20px;
-  /* فاصله از کارت‌ها */
 }
 
-/* =========================
-   آیکن‌های کوچک
-   ========================= */
-
-/* آیکن‌های کوچک متا */
+/* Small icons */
 .small-icon {
   width: 20px;
-  /* عرض آیکن */
   height: 20px;
-  /* ارتفاع آیکن */
   display: flex;
-  /* فلکس برای تراز بهتر */
 }
 
-/* =========================
-   ریسپانسیو بلاگ
-   ========================= */
-
-/* تبلت و صفحه‌های متوسط */
+/* ========================= BLOG RESPONSIVE ========================= */
+/* Tablet: max-width 992px */
 @media (max-width: 992px) {
   .blog-cards {
     flex-wrap: wrap;
-    /* شکستن کارت‌ها به خط بعدی */
+    /* Allow cards to wrap on smaller screens */
     justify-content: center;
-    /* وسط‌چین کارت‌ها */
   }
 
   .blog-card {
     width: 280px;
-    /* کاهش عرض کارت‌ها */
+    /* Slightly smaller cards */
   }
 }
 
-/* موبایل و صفحه‌های کوچک */
+/* Mobile: max-width 576px */
 @media (max-width: 576px) {
   .blog-wrapper {
     flex-direction: column;
-    /* قرارگیری عمودی فلش‌ها و کارت‌ها */
+    /* Stack arrows and cards vertically */
   }
 
   .blog-arrow {
     display: none;
-    /* مخفی شدن فلش‌ها در موبایل */
+    /* Hide arrows on small screens */
   }
 
   .blog-cards {
     flex-direction: column;
-    /* نمایش یک کارت در هر ردیف */
+    /* One card per row */
     align-items: center;
-    /* وسط‌چین کارت‌ها */
   }
 
   .blog-card {
     width: 90%;
-    /* تمام عرض کارت در موبایل */
+    /* Full width cards on mobile */
   }
 
   .blog-content {
     text-align: right;
-    /* راست‌چین شدن متن برای RTL */
+    /* RTL friendly text alignment */
   }
 
   .blog-meta {
     flex-wrap: wrap;
-    /* جلوگیری از بیرون‌زدگی آیتم‌ها */
+    /* Prevent overflow on small screens */
     justify-content: flex-start;
   }
 }

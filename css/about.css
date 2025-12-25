@@ -1,187 +1,132 @@
-/* تعریف فونت وزیر */
 @font-face {
   font-family: VazirFont;
-  /* نام فونت */
   src: url(../fonts/Vazir/Farsi-Digits/Vazir-FD.ttf);
-  /* مسیر فایل فونت */
 }
 
-/* تنظیم فونت پیش‌فرض کل سایت */
 body {
   font-family: VazirFont;
 }
 
 /* =========================
-   بخش درباره من
+   ABOUT AREA
    ========================= */
-
-/* سکشن اصلی درباره من */
 .about-area {
   padding: 225px 0 220px;
-  /* فاصله داخلی از بالا، کناره‌ها و پایین */
+  /* Top, right/left, bottom */
   background: #ffffff;
-  /* پس‌زمینه سفید */
   position: relative;
-  /* برای کنترل لایه‌بندی */
   z-index: 2;
-  /* قرارگیری بالاتر از عناصر دیگر */
 }
 
 /* =========================
-   چیدمان بخش درباره
+   ABOUT LAYOUT
    ========================= */
-
-/* ساختار کلی محتوا و تصویر */
 .about-wrapper {
   display: flex;
-  /* استفاده از فلکس‌باکس */
   flex-direction: row-reverse;
-  /* چیدمان راست به چپ */
+  /* RTL layout */
   align-items: center;
-  /* تراز عمودی وسط */
   justify-content: space-between;
-  /* فاصله بین محتوا و تصویر */
   gap: 50px;
-  /* فاصله بین ستون‌ها */
 }
 
 /* =========================
-   محتوای درباره من
+   ABOUT CONTENT
    ========================= */
-
-/* بخش متنی درباره من */
 .about-content {
   flex: 2;
-  /* سهم بیشتر نسبت به تصویر */
 }
 
-/* عنوان درباره من */
 .about-content h2 {
   font-size: 32px;
-  /* اندازه عنوان */
   margin-bottom: 20px;
-  /* فاصله از پایین */
   color: #222;
-  /* رنگ تیره متن */
   text-align: right;
-  /* راست‌چین */
 }
 
-/* بخش تأکیدی عنوان */
 .about-content h2 span {
   color: #333;
-  /* رنگ متفاوت برای تاکید */
   font-weight: 600;
-  /* ضخامت فونت */
   margin-left: 10px;
-  /* فاصله از متن کناری */
   display: block;
-  /* نمایش در خط جدا */
 }
 
-/* متن توضیح درباره من */
 .about-content p {
   line-height: 1.9;
-  /* فاصله خطوط مناسب */
   color: #555;
-  /* رنگ خاکستری متن */
   margin-bottom: 40px;
-  /* فاصله از بخش بعدی */
   text-align: right;
-  /* راست‌چین */
 }
 
 /* =========================
-   بخش مهارت‌ها
+   SKILLS SECTION
    ========================= */
 
-/* هر مهارت به‌صورت جداگانه */
+
+
 .skill {
   margin-bottom: 25px;
-  /* فاصله بین مهارت‌ها */
 }
 
-/* عنوان مهارت و درصد */
 .skill-title {
   display: flex;
-  /* نمایش عنوان و مقدار کنار هم */
   justify-content: space-between;
-  /* فاصله بین نام مهارت و درصد */
   font-size: 14px;
-  /* اندازه فونت */
   margin-bottom: 6px;
-  /* فاصله از نوار مهارت */
   color: #222;
-  /* رنگ متن */
 }
 
-/* نوار پس‌زمینه مهارت */
 .skill-bar {
   width: 100%;
-  /* عرض کامل */
   height: 8px;
-  /* ارتفاع نوار */
   background: #eeeeee;
-  /* رنگ پس‌زمینه */
   overflow: hidden;
-  /* جلوگیری از بیرون‌زدگی */
 }
 
-/* میزان پر شدن مهارت */
 .skill-fill {
   height: 70%;
-  /* ارتفاع نوار پرشده */
   background: #2c2b31;
-  /* رنگ نوار مهارت */
   transition: width 1s ease;
-  /* انیمیشن نرم هنگام تغییر درصد */
+  /* Animated width for skill bars */
 }
 
 /* =========================
-   تصویر درباره من
+   ABOUT IMAGE
    ========================= */
-
-/* بخش تصویر */
 .about-image {
   flex: 1;
-  /* سهم کمتر نسبت به متن */
   text-align: center;
-  /* وسط‌چین تصویر */
 }
 
-/* تصویر داخل بخش درباره */
 .about-image img {
   max-width: 100%;
-  /* جلوگیری از خروج از کادر */
   height: auto;
-  /* حفظ نسبت تصویر */
   border-radius: 8px;
-  /* گوشه‌های گرد */
 }
 
+
+
 /* =========================
-   ریسپانسیو
+   RESPONSIVE STYLING
    ========================= */
 
-/* تبلت و صفحه‌های متوسط */
+/* Tablet (max-width: 992px) */
 @media (max-width: 992px) {
   .about-wrapper {
     flex-direction: column;
-    /* قرارگیری عمودی محتوا */
+    /* Stack content vertically */
     gap: 40px;
-    /* فاصله بین بخش‌ها */
     text-align: center;
   }
 
   .about-content,
   .about-image {
     width: 100%;
-    /* عرض کامل هر بخش */
   }
 
   .all-skills {
     flex-direction: column;
-    /* قرارگیری عمودی ستون‌های مهارت */
+    /* Stack skill columns vertically */
     gap: 0;
     align-items: center;
   }
@@ -189,30 +134,29 @@ body {
   .skills-1,
   .skills-2 {
     width: 100%;
-    /* عرض کامل ستون‌ها */
+    /* Full width skill columns */
   }
 
   .about-content h2,
   .about-content p {
     text-align: center;
-    /* وسط‌چین متن‌ها */
   }
 }
 
-/* موبایل و صفحه‌های کوچک */
+/* Mobile (max-width: 576px) */
 @media (max-width: 576px) {
   .about-content h2 {
     font-size: 24px;
-    /* کاهش اندازه عنوان */
+    /* Smaller heading */
   }
 
   .about-content p {
     font-size: 14px;
-    /* کاهش اندازه متن */
+    /* Smaller paragraph text */
   }
 
   .skill-title {
     font-size: 12px;
-    /* کوچک‌تر شدن متن مهارت‌ها */
+    /* Smaller skill labels */
   }
 }

@@ -1,196 +1,136 @@
 /* =========================
    FOOTER
    ========================= */
-
-/* استایل کلی فوتر (پس‌زمینه، رنگ متن و فاصله داخلی) */
 .footer {
   background: #151515;
-  /* رنگ پس‌زمینه تیره */
   color: #ccc;
-  /* رنگ پیش‌فرض متن‌ها */
   text-align: center;
-  /* وسط‌چین کردن متن */
   padding: 60px 20px;
-  /* فاصله داخلی بالا/پایین و چپ/راست */
 }
 
-/* =========================
-   FOOTER LOGO
-   ========================= */
-
-/* لوگو یا نام سایت در فوتر */
+/* Footer logo */
 .footer-logo {
   color: #fff;
-  /* رنگ سفید برای جلب توجه */
   font-size: 26px;
-  /* اندازه فونت لوگو */
   letter-spacing: 2px;
-  /* فاصله بین حروف */
   margin-bottom: 25px;
-  /* فاصله از بخش‌های پایین */
 }
 
 /* =========================
-   خط درباره
+   INFO LINE
    ========================= */
-
-/* کانتینر اطلاعات تماس (آدرس، ایمیل، تلفن و ...) */
 .footer-info {
   display: flex;
-  /* استفاده از فلکس‌باکس */
   justify-content: center;
-  /* وسط‌چین افقی آیتم‌ها */
   gap: 30px;
-  /* فاصله بین آیتم‌ها */
   flex-wrap: wrap;
-  /* رفتن آیتم‌ها به خط بعدی در صفحه‌های کوچک */
 }
 
-/* آیکن‌های اطلاعات تماس */
 .footer-info img {
   border-radius: 80px;
-  /* گرد کردن آیکن‌ها */
+  /* Round icons */
   width: 20px;
   height: 20px;
 }
 
-/* =========================
-   ایکون های شبکه های اجتماعی
-   ========================= */
-
-/* آیکن‌های شبکه اجتماعی داخل بخش اطلاعات */
+/* Social icons inside footer */
 .footer-social img {
   border-radius: 80px;
-  /* گرد شدن کامل آیکن */
   width: 20px;
   height: 20px;
 }
 
-/* متن و آیکن هر آیتم اطلاعات */
 .footer-info span {
   display: flex;
-  /* قرارگیری آیکن و متن کنار هم */
   align-items: center;
-  /* وسط‌چین عمودی */
   gap: 8px;
-  /* فاصله بین آیکن و متن */
+  /* Space between icon and text */
 }
 
 /* =========================
    DIVIDER
    ========================= */
-
-/* خط جداکننده بین بخش‌ها */
 .footer-divider {
   width: 100%;
   height: 1px;
-  /* ضخامت خط */
   background: rgba(255, 255, 255, 0.1);
-  /* رنگ کم‌رنگ برای ظرافت */
+  /* Subtle divider */
   margin: 40px 0;
-  /* فاصله از بالا و پایین */
 }
 
 /* =========================
-   آیکون شبکه های اجتماعی
+   SOCIAL ICONS
    ========================= */
 
-/* کانتینر آیکن‌های شبکه اجتماعی */
 .footer-social {
   display: flex;
-  /* چیدمان فلکسی */
   justify-content: center;
-  /* وسط‌چین افقی */
   gap: 15px;
-  /* فاصله بین آیکن‌ها */
 }
 
-/* لینک هر آیکن شبکه اجتماعی */
 .footer-social a {
   width: 36px;
   height: 36px;
-  /* اندازه دکمه */
   border: 1px solid #555;
-  /* کادر دور آیکن */
   border-radius: 50%;
-  /* دایره‌ای شدن */
   display: flex;
-  /* وسط‌چین محتوا */
   align-items: center;
   justify-content: center;
 }
 
-/* افکت هاور روی آیکن‌های شبکه اجتماعی */
+
 .footer-social a:hover {
   background: #fff;
-  /* تغییر رنگ پس‌زمینه */
   color: #262525;
-  /* تغییر رنگ آیکن */
 }
 
 /* =========================
-   متن کپی رایت
+   COPYRIGHT TEXT
    ========================= */
-
-/* متن کپی‌رایت پایین فوتر */
 .copyright {
   font-size: 13px;
-  /* فونت کوچک‌تر */
   color: #777;
-  /* رنگ ملایم */
 }
 
 /* =========================
-   پایین صفحه ریسپانسیو
+   RESPONSIVE FOOTER (FLEX ONLY)
    ========================= */
 
-/* حالت تبلت */
+/* Tablet */
 @media (max-width: 992px) {
-
-  /* بخش بالایی فوتر */
   .footer-top {
     flex-direction: column;
-    /* قرارگیری آیتم‌ها زیر هم */
+    /* Stack logo and info */
     align-items: center;
-    /* وسط‌چین افقی */
     text-align: center;
-    /* وسط‌چین متن */
     gap: 20px;
-    /* فاصله بین بخش‌ها */
   }
 
-  /* اطلاعات تماس در تبلت */
   .footer-info {
     flex-direction: column;
-    /* چیدمان عمودی */
+    /* Stack info items vertically */
     gap: 10px;
-    /* کاهش فاصله */
   }
 
-  /* شبکه‌های اجتماعی در تبلت */
   .footer-social {
     justify-content: center;
     margin-top: 15px;
   }
 }
 
-/* حالت موبایل */
+/* Mobile */
 @media (max-width: 576px) {
-
-  /* بخش پایینی فوتر */
   .footer-bottom {
     flex-direction: column;
-    /* چیدمان عمودی */
+    /* Stack copyright & social */
     align-items: center;
-    /* وسط‌چین */
     text-align: center;
-    /* وسط‌چین متن */
     gap: 10px;
   }
 
-  /* کوچک‌تر شدن آیکن‌ها در موبایل */
   .footer-social a img {
     width: 25px;
     height: 25px;
+    /* Smaller icons on mobile */
   }
 }

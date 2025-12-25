@@ -1,21 +1,16 @@
-/* =========================
-   Hero اسلایدر بخش 
-   ========================= */
-
-/* کانتینر اصلی هیرو (تمام ارتفاع صفحه) */
+/* ========================= HERO SLIDER ========================= */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-/* کانتینر اسلایدر (تمام فضای هیرو) */
+/* اسلایدر */
 .hero-slider {
   position: absolute;
   inset: 0;
 }
 
-/* هر اسلاید (پس‌زمینه تصویری) */
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -27,16 +22,11 @@
   will-change: opacity;
 }
 
-/* اسلاید فعال (قابل نمایش) */
 .hero-slide.active {
   opacity: 1;
 }
 
-/* =========================
-   کنترل بخش اسلایدر
-   ========================= */
-
-/* کانتینر کنترل‌های اسلایدر */
+/* کنترل‌های اسلایدر */
 .hero-controls {
   position: absolute;
   bottom: 35px;
@@ -47,7 +37,7 @@
   z-index: 3;
 }
 
-/* دات‌ها / مستطیل‌های کنترل اسلایدر */
+/* مستطیل‌ها */
 .hero-dot {
   width: 35px;
   height: 6px;
@@ -57,21 +47,17 @@
   background: transparent;
 }
 
-/* افکت هاور روی دات‌ها */
+/* hover */
 .hero-dot:hover {
   background: #fff;
 }
 
-/* دات فعال (اسلاید انتخاب‌شده) */
+/* فعال */
 .hero-dot.active {
   background: #fff;
 }
 
-/* =========================
-   HERO OVERLAY
-   ========================= */
-
-/* لایه تیره روی اسلایدر برای خوانایی متن */
+/* Overlay تیره */
 .hero::after {
   content: "";
   position: absolute;
@@ -80,11 +66,7 @@
   z-index: 1;
 }
 
-/* =========================
-   HERO CONTENT
-   ========================= */
-
-/* محتوای متنی روی اسلایدر */
+/* محتوای روی اسلایدر */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -100,21 +82,19 @@
   padding: 0 20px;
 }
 
-/* عنوان اصلی هیرو */
 .hero-content h2 {
   font-size: 52px;
   font-weight: 700;
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* متن توضیحی زیر عنوان */
 .hero-content p {
   font-size: 18px;
   margin-bottom: 25px;
   text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* دکمه فراخوان  */
+/* دکمه */
 .hero-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -124,17 +104,12 @@
   transition: 0.3s;
 }
 
-/* افکت هاور دکمه */
 .hero-btn:hover {
   background: #fff;
   color: #000;
 }
 
-/* =========================
-   برگشت به پایین
-   ========================= */
-
-/* دکمه بازگشت به بالای صفحه */
+/* ========================= BACK TO TOP BUTTON ========================= */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -151,28 +126,21 @@
   font-size: 18px;
   border-radius: 50%;
   z-index: 999;
-
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
 }
 
-/* حالت نمایش دکمه */
 #backToTop.show {
   opacity: 1;
   visibility: visible;
 }
 
-/* =========================
-   بخش درباره
-   ========================= */
-
-/* بخش درباره من */
+/* ========================= ABOUT SECTION ========================= */
 .about {
   padding: 80px 20px;
 }
 
-/* کانتینر محتوای درباره من */
 .about-wrapper {
   max-width: 1200px;
   margin: auto;
@@ -182,13 +150,11 @@
   align-items: center;
 }
 
-/* عنوان بخش درباره من */
 .about-content h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-/* زیرعنوان (مثلاً شغل یا توضیح کوتاه) */
 .about-content h2 span {
   display: block;
   font-size: 18px;
@@ -196,30 +162,23 @@
   margin-top: 5px;
 }
 
-/* متن توضیحی درباره من */
 .about-content p {
   color: #666;
   line-height: 1.7;
   margin-bottom: 30px;
 }
 
-/* =========================
-   مهارت ها
-   ========================= */
-
-/* کانتینر مهارت‌ها */
+/* ========================= SKILLS ========================= */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 30px;
 }
 
-/* هر مهارت */
 .skill {
   flex: 0 0 calc(50% - 15px);
 }
 
-/* عنوان مهارت و درصد */
 .skill-title {
   display: flex;
   justify-content: space-between;
@@ -227,7 +186,6 @@
   margin-bottom: 6px;
 }
 
-/* نوار زمینه مهارت */
 .skill-bar {
   background: #eee;
   height: 8px;
@@ -235,27 +193,18 @@
   overflow: hidden;
 }
 
-/* میزان پرشدگی مهارت */
 .skill-fill {
   height: 100%;
   background: #000;
 }
 
-/* =========================
-   عکس درباره
-   ========================= */
-
-/* تصویر بخش درباره من */
+/* ========================= ABOUT IMAGE ========================= */
 .about-image img {
   width: 100%;
   display: block;
 }
 
-/* =========================
-   ریسپانسیو بخش Hero
-   ========================= */
-
-/* تنظیمات ریسپانسیو برای تبلت */
+/* ========================= RESPONSIVE HERO ========================= */
 @media (max-width: 992px) {
   .hero-content h2 {
     font-size: 32px;
@@ -266,7 +215,6 @@
   }
 }
 
-/* تنظیمات ریسپانسیو برای موبایل */
 @media (max-width: 576px) {
   .hero-content h2 {
     font-size: 24px;

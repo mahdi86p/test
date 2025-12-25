@@ -1,25 +1,16 @@
-/* =========================
-   ریست پیش‌فرض‌ها
-   ========================= */
-
-/* حذف مارجین و پدینگ پیش‌فرض و تنظیم box-sizing */
+/* ========================= ریست پیش فرض ها ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   پدینگ به بادی
-   ========================= */
-
-/* ایجاد فاصله از بالا برای جلوگیری از هم‌پوشانی با هدر فیکس */
+/* ========================= پدینگ به بادی ========================= */
 body {
   padding-top: 90px;
-  /* ارتفاع تقریبی هدر (در صورت نیاز قابل تغییر) */
+  /* Approximate header height; adjust between 80-100px if needed */
 }
 
-/* تنظیم منوی دسکتاپ در نمایشگرهای بزرگ */
 @media (min-width: 993px) {
   .nav-list {
     max-height: none !important;
@@ -29,11 +20,7 @@ body {
   }
 }
 
-/* =========================
-   HEADER / NAVBAR
-   ========================= */
-
-/* استایل هدر ثابت در بالای صفحه */
+/* ========================= HEADER / NAVBAR ========================= */
 .site-header {
   position: fixed;
   top: 0;
@@ -41,29 +28,25 @@ body {
   right: 0;
   width: 100%;
   background: rgba(33, 32, 32, 0.914);
-  /* پس‌زمینه تیره نیمه‌شفاف */
+  /* Semi-transparent dark background */
   backdrop-filter: blur(12px);
-  /* افکت بلور شیشه‌ای */
+  /* Glass blur effect */
   -webkit-backdrop-filter: blur(12px);
-  /* پشتیبانی مرورگر سافاری */
+  /* Safari support */
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.4s ease;
   padding: 15px 0;
 }
 
-/* استایل هدر هنگام اسکرول */
+/* Header when scrolled */
 .site-header.scrolled {
   background: rgba(30, 30, 30, 0.95);
   padding: 10px 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* =========================
-   CONTAINER
-   ========================= */
-
-/* کانتینر اصلی هدر (چیدمان لوگو و منو) */
+/* ========================= CONTAINER ========================= */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -73,14 +56,10 @@ body {
   justify-content: space-between;
   height: 70px;
   direction: rtl;
-  /* راست‌چین بودن محتوا */
+  /* Right-to-left layout */
 }
 
-/* =========================
-   LOGO
-   ========================= */
-
-/* استایل لوگوی سایت */
+/* ========================= LOGO ========================= */
 .logo {
   color: #ffffff;
   font-size: 28px;
@@ -89,31 +68,27 @@ body {
   text-transform: uppercase;
 }
 
-/* =========================
-   NAVIGATION
-   ========================= */
-
-/* کانتینر منوی ناوبری */
+/* ========================= NAVIGATION ========================= */
 .nav-bar {
   display: flex;
   position: relative;
 }
 
-/* مخفی کردن چک‌باکس کنترل همبرگری */
+/* Hide the checkbox for hamburger */
 .nav-bar input[type="checkbox"] {
   display: none;
 }
 
-/* آیکن همبرگری (موبایل) */
+/* Hamburger icon (mobile) */
 .nav-bar label {
   display: none;
-  /* مخفی در دسکتاپ */
+  /* Hidden on desktop */
   cursor: pointer;
   font-size: 24px;
   padding: 10px;
 }
 
-/* لیست لینک‌های منو */
+/* Navigation list */
 .nav-list {
   list-style: none;
   display: flex;
@@ -121,7 +96,6 @@ body {
   gap: 20px;
 }
 
-/* لینک‌های داخل منو */
 .nav-list li a {
   text-decoration: none;
   color: #ffffff;
@@ -133,24 +107,21 @@ body {
   position: relative;
 }
 
-/* افکت هاور روی لینک‌ها */
+/* Hover effect */
 .nav-list li a:hover {
   opacity: 0.8;
   color: #ffffff;
 }
 
-/* لینک فعال */
 .nav-list li a.active {
   color: #ffffff;
 }
 
-/* خطوط تزئینی لینک فعال */
 .nav-list li a.active::after,
 .nav-list li a.active::before {
   width: 15px;
 }
 
-/* خط پایینی لینک */
 .nav-list li a::after {
   content: '';
   position: absolute;
@@ -162,7 +133,6 @@ body {
   right: 0;
 }
 
-/* خط بالایی لینک */
 .nav-list li a::before {
   content: '';
   position: absolute;
@@ -174,34 +144,28 @@ body {
   left: 0;
 }
 
-/* افکت هاور خط پایینی */
 .nav-list li a:hover::after {
   width: 15px;
   right: 0;
 }
 
-/* افکت هاور خط بالایی */
 .nav-list li a:hover::before {
   width: 15px;
   left: 0;
 }
 
-/* نمایش منو در دسکتاپ */
 @media (min-width: 992px) {
   .nav-list {
     display: flex;
   }
 }
 
-/* =========================
-   RESPONSIVE HEADER / NAVBAR
-   ========================= */
-
-/* حالت تبلت */
+/* ========================= RESPONSIVE HEADER / NAVBAR (FLEX ONLY) ========================= */
+/* Tablet */
 @media (max-width: 992px) {
   .site-header .container {
     flex-direction: column;
-    /* قرارگیری لوگو و منو زیر هم */
+    /* Stack logo and nav vertically */
     align-items: center;
   }
 
@@ -210,10 +174,10 @@ body {
     display: block;
   }
 
-  /* منوی عمودی */
   .nav-list {
     display: flex;
     flex-direction: column;
+    /* Vertical menu */
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
@@ -225,19 +189,19 @@ body {
     padding: 10px 15px;
   }
 
-  /* نمایش آیکن همبرگری */
   .nav-bar label {
     display: block;
+    /* Show hamburger */
   }
 }
 
-/* حالت موبایل (منوی همبرگری) */
+/* Mobile: Hamburger menu */
 @media (max-width: 576px) {
   .nav-bar label {
     display: block;
+    /* Show hamburger */
   }
 
-  /* منوی کشویی موبایل */
   .nav-list {
     flex-direction: column;
     position: absolute;
@@ -251,22 +215,20 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* نمایش منو هنگام فعال شدن چک‌باکس */
+  /* Show menu when checkbox is checked */
   .nav-bar input[type="checkbox"]:checked~.nav-list {
     max-height: 500px;
-    /* ارتفاع کافی برای نمایش لینک‌ها */
+    /* Enough height to display all links */
   }
 
-  /* لینک‌های منو در موبایل */
   .nav-list a {
     padding: 12px 15px;
     text-align: right;
-    /* سازگار با RTL */
+    /* RTL friendly */
     border-bottom: 1px solid #eee;
   }
 }
 
-/* تنظیم مجدد کانتینر سراسری */
 .container {
   width: 100%;
   max-width: 1200px;
