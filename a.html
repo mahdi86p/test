@@ -6,27 +6,38 @@
     <title>Adsunt - Web Designer & Developer</title>
 
     <!-- ===== فایل استایل سی اس اس ===== -->
+    <!-- ===== فایل استایل سی اس اس ===== -->
     <link rel="stylesheet" href="css/header.css" />
+    <!-- استایل هدر -->
     <!-- استایل هدر -->
     <link rel="stylesheet" href="css/hero.css" />
     <!-- استایل اسلایدر صفحه اصلی -->
+    <!-- استایل اسلایدر صفحه اصلی -->
     <link rel="stylesheet" href="css/about.css" />
+    <!-- استایل بخش درباره من -->
     <!-- استایل بخش درباره من -->
     <link rel="stylesheet" href="css/services.css" />
     <!-- استایل بخش خدمات -->
+    <!-- استایل بخش خدمات -->
     <link rel="stylesheet" href="css/portfolio.css" />
+    <!-- استایل بخش نمونه کارها -->
     <!-- استایل بخش نمونه کارها -->
     <link rel="stylesheet" href="css/blog.css" />
     <!-- استایل بخش بلاگ -->
+    <!-- استایل بخش بلاگ -->
     <link rel="stylesheet" href="css/contact.css" />
+    <!-- استایل بخش اطلاعات تماس -->
     <!-- استایل بخش اطلاعات تماس -->
     <link rel="stylesheet" href="css/contaact-form.css" />
     <!-- استایل فرم تماس -->
+    <!-- استایل فرم تماس -->
     <link rel="stylesheet" href="css/footer.css" />
+    <!-- استایل پایین صفحه -->
     <!-- استایل پایین صفحه -->
   </head>
 
   <body>
+    <!-- ===== هدر سایت ===== -->
     <!-- ===== هدر سایت ===== -->
     <header class="site-header">
       <div class="container">
@@ -35,34 +46,66 @@
         <div class="logo">ADSUNT</div>
 
         <!-- ===== منو ===== -->
+        <!-- ===== منو ===== -->
         <nav class="nav-bar">
+          <!-- منوی باز شو ریسپانسیو -->
           <!-- منوی باز شو ریسپانسیو -->
           <input type="checkbox" id="menu-toggle" />
           <!-- چک‌باکس برای باز و بسته کردن منو -->
+          <!-- چک‌باکس برای باز و بسته کردن منو -->
           <label for="menu-toggle" id="toggle">☰</label>
           <!-- آیکون منو -->
+          <!-- آیکون منو -->
 
+          <!-- لینک اسکرول به بخش های مختلف وبسایت -->
           <!-- لینک اسکرول به بخش های مختلف وبسایت -->
           <ul class="nav-list">
             <li><a href="#home-area">خانه</a></li>
             <!-- لینک به اسلایدر -->
+            <!-- لینک به اسلایدر -->
             <li><a href="#about-area">درباره من</a></li>
+            <!-- لینک به بخش درباره من -->
             <!-- لینک به بخش درباره من -->
             <li><a href="#service-area">خدمات</a></li>
             <!-- لینک به خدمات -->
+            <!-- لینک به خدمات -->
             <li><a href="#portfolio-area">نمونه‌کارها</a></li>
+            <!-- لینک به نمونه کارها -->
             <!-- لینک به نمونه کارها -->
             <li><a href="#team-area">تیم</a></li>
             <!-- لینک به تیم -->
+            <!-- لینک به تیم -->
             <li><a href="#blog-area">بلاگ</a></li>
             <!-- لینک به بلاگ -->
+            <!-- لینک به بلاگ -->
             <li><a href="#contact-area">تماس با ما</a></li>
+            <!-- لینک به تماس -->
             <!-- لینک به تماس -->
           </ul>
         </nav>
       </div>
     </header>
 
+    <!-- ===== اسلایدر عکس ===== -->
+    <section id="home-area" class="hero">
+      <div class="hero-slider">
+        <!-- کانتینر اسلایدر -->
+        <div
+          class="hero-slide active"
+          style="background-image: url('image/slider1.jpg')"
+        ></div>
+        <!-- اسلاید اول -->
+        <div
+          class="hero-slide"
+          style="background-image: url('image/slider2.jpg')"
+        ></div>
+        <!-- اسلاید دوم -->
+        <div
+          class="hero-slide"
+          style="background-image: url('image/slider3.png')"
+        ></div>
+        <!-- اسلاید سوم -->
+      </div>
     <!-- ===== اسلایدر عکس ===== -->
     <section id="home-area" class="hero">
       <div class="hero-slider">
@@ -93,7 +136,26 @@
         <a href="#portfolio-area" class="hero-btn">نمونه‌کارهای من</a>
         <!-- دکمه هدایت به نمونه کارها -->
       </div>
+      <!-- متن ابتدای صفحه -->
+      <div class="hero-content">
+        <h2>ما خلاق هستیم</h2>
+        <!-- تیتر اصلی -->
+        <p>متخصص در طراحی و توسعه وب</p>
+        <!-- توضیح کوتاه -->
+        <a href="#portfolio-area" class="hero-btn">نمونه‌کارهای من</a>
+        <!-- دکمه هدایت به نمونه کارها -->
+      </div>
 
+      <!-- کنترل‌های اسلایدر -->
+      <div class="hero-controls">
+        <span class="hero-dot active" data-slide="0"></span>
+        <!-- نقطه اسلاید اول -->
+        <span class="hero-dot" data-slide="1"></span>
+        <!-- نقطه اسلاید دوم -->
+        <span class="hero-dot" data-slide="2"></span>
+        <!-- نقطه اسلاید سوم -->
+      </div>
+    </section>
       <!-- کنترل‌های اسلایدر -->
       <div class="hero-controls">
         <span class="hero-dot active" data-slide="0"></span>
@@ -106,18 +168,24 @@
     </section>
 
     <!-- ===== دکمه برگشت به اول صفحه ===== -->
+    <!-- ===== دکمه برگشت به اول صفحه ===== -->
     <button id="backToTop">↑</button>
+    <!-- دکمه بازگشت به بالا -->
     <!-- دکمه بازگشت به بالا -->
 
     <!-- ===== بخش درباره من ===== -->
+    <!-- ===== بخش درباره من ===== -->
     <section id="about-area" class="about">
       <div class="about-wrapper">
+        <!-- کانتینر برای چیدمان افقی -->
+        <!-- درباره من -->
         <!-- کانتینر برای چیدمان افقی -->
         <!-- درباره من -->
         <div class="about-content">
           <h2>
             داستان Adsunt
             <span>مهارت‌های من</span>
+            <!-- زیرتیتر -->
             <!-- زیرتیتر -->
           </h2>
           <p>
@@ -126,14 +194,18 @@
           </p>
 
           <!-- بخش مهارت ها -->
+          <!-- بخش مهارت ها -->
           <div class="skills">
+            <!-- بخش بندی مهارت ها -->
             <!-- بخش بندی مهارت ها -->
             <div class="skill">
               <div class="skill-title">
                 <!-- اسم مهارت -->
+                <!-- اسم مهارت -->
                 <span>طراحی وب</span><span>60%</span>
               </div>
               <div class="skill-bar">
+                <!-- سطح مهارت -->
                 <!-- سطح مهارت -->
                 <div class="skill-fill" style="width: 60%"></div>
               </div>
@@ -183,33 +255,44 @@
         </div>
 
         <!-- عکس پروفایل -->
+        <!-- عکس پروفایل -->
         <div class="about-image">
           <img src="image/image4.jpg" alt="About Me" />
+          <!-- تصویر پروفایل -->
           <!-- تصویر پروفایل -->
         </div>
       </div>
     </section>
 
     <!-- ===== بخش خدمات ===== -->
+    <!-- ===== بخش خدمات ===== -->
     <section id="service-area" class="services">
+      <!-- ابتدای خدمات -->
       <!-- ابتدای خدمات -->
       <div class="section-title">
         <h2>خدمات من</h2>
         <!-- تیتر بخش -->
+        <!-- تیتر بخش -->
         <hr class="title-line" />
+        <!-- خط زیر تیتر -->
         <!-- خط زیر تیتر -->
         <p>ارائه خدمات حرفه‌ای در زمینه طراحی، توسعه و بازاریابی دیجیتال.</p>
         <!-- توضیح کوتاه -->
+        <!-- توضیح کوتاه -->
       </div>
 
+      <!-- خدمات به صورت گرید -->
       <!-- خدمات به صورت گرید -->
       <div class="services-grid">
         <div class="service-card">
           <img src="image/pencil_2168808.png" alt="طراحی وب" />
           <!-- آیکون خدمت -->
+          <!-- آیکون خدمت -->
           <h3>طراحی وب</h3>
           <!-- نام خدمت -->
+          <!-- نام خدمت -->
           <p>طراحی رابط‌های کاربری مدرن و واکنش‌گرا.</p>
+          <!-- توضیح خدمت -->
           <!-- توضیح خدمت -->
         </div>
 

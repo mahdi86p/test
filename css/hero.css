@@ -151,7 +151,6 @@
   font-size: 18px;
   border-radius: 50%;
   z-index: 999;
-
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
